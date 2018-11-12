@@ -2,4 +2,6 @@
 build.fxbuild
 .settings
 .project
-bin
+.DS_Store
+bin/
+
