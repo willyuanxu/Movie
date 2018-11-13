@@ -1,6 +1,7 @@
 package application;
 
 public class Yuanx_yeqing_MainApp {
+
 	
 	
 	//set up components, add accessibility text
@@ -11,7 +12,6 @@ public class Yuanx_yeqing_MainApp {
 	private void setUpListView() {
 		
 	}
-	
 	
 
 }
