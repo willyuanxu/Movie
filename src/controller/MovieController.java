@@ -29,8 +29,8 @@ public class MovieController {
 		this.model = new MovieListModel();
 		// images used for the stars
 		if (filledStar == null && unfilledStar == null) {
-			filledStar = new Image("/view/filledStar.png");
-			unfilledStar = new Image("/view/unfilledStar.png");
+			filledStar = new Image("/images/filledStar.png");
+			unfilledStar = new Image("/images/unfilledStar.png");
 		}
 		
 		// put all stars into a list for easy tracking 
@@ -62,6 +62,7 @@ public class MovieController {
 	private void setUpMainDisplay(Movie m) {
 		this.movieLabel.setText(m.getName());
 		this.movieImage.setImage(m.getImage());
+		this.setStars(m.getRating());
 	}
 	
 	private void setUpStarButtonsLogic() {
