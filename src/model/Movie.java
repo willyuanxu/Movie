@@ -1,13 +1,16 @@
 package model;
 
+import javafx.scene.image.Image;
+
 public class Movie {
 	private String name;
-	private String description;
-	private String imageURL;
-	private double rating;
+	private Image image; 
+	private int rating;
 	
-	public Movie() {
-		
+	public Movie(String name, String filepath) {
+		this.name = name;
+		this.image = new Image(filepath);
+		this.rating = 0;
 	}
 	public String getName() {
 		return name;
@@ -17,27 +20,18 @@ public class Movie {
 		this.name = name;
 	}
 
-	public String getDescription() {
-		return description;
+
+	public Image getImage() {
+		return image;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
 
-	public String getImageURL() {
-		return imageURL;
-	}
 
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
-	}
-
-	public double getRating() {
+	public int getRating() {
 		return rating;
 	}
 
-	public void setRating(double rating) {
+	public void setRating(int rating) {
 		this.rating = rating;
 	}
 

@@ -7,7 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainApp extends Application {
+public class Yuanx_yeqing_MainApp extends Application {
 	
 	public void start(Stage primaryStage) {
 		try {
@@ -15,7 +15,7 @@ public class MainApp extends Application {
 			Parent root = (Parent)loader.load();
 			MovieController control = loader.getController();
 			control.setMain(this);
-			Scene scene = new Scene(root, 800, 600);
+			Scene scene = new Scene(root, 700, 500);
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
