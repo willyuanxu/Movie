@@ -37,8 +37,8 @@ public class MovieController {
 		stars = Arrays.asList(starOne, starTwo, starThree, starFour, starFive);
 		this.setStars(0);
 		
-		
 		this.setUpListView();
+		this.setUpStarButtonsLogic();
 	}
 	
 	private void setUpListView() {
@@ -62,6 +62,16 @@ public class MovieController {
 	private void setUpMainDisplay(Movie m) {
 		this.movieLabel.setText(m.getName());
 		this.movieImage.setImage(m.getImage());
+	}
+	
+	private void setUpStarButtonsLogic() {
+		for (ImageView star : stars) {
+			star.setOnMouseClicked(value -> {
+				int index = stars.indexOf(star);
+				this.setStars(index+1);
+				this.movieList.getSelectionModel().getSelectedItem().setRating(index+1);
+			});
+		}
 	}
 	
 	private void setStars(int num) {
