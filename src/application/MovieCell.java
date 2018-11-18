@@ -35,9 +35,12 @@ public class MovieCell extends ListCell<Movie>{
 	
 	private void makeRow(Movie m) {
 		name.setText(m.getName());
+		
 		icon.setImage(m.getImage());
 		icon.setFitWidth(30);
 		icon.setPreserveRatio(true);
+		name.setAccessibleText("This is the name for the movie.");
+		icon.setAccessibleText("This is an image for the movie.");
 		
 		
 	}

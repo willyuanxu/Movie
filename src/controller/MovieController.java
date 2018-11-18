@@ -35,6 +35,7 @@ public class MovieController {
 		
 		// put all stars into a list for easy tracking 
 		stars = Arrays.asList(starOne, starTwo, starThree, starFour, starFive);
+
 		this.setStars(0);
 		
 		this.setUpListView();
@@ -61,7 +62,9 @@ public class MovieController {
 	
 	private void setUpMainDisplay(Movie m) {
 		this.movieLabel.setText(m.getName());
+		this.movieLabel.setAccessibleText("The title of the movie is "+m.getName());
 		this.movieImage.setImage(m.getImage());
+		this.movieImage.setAccessibleText("This is the poster for the movie.");
 		this.setStars(m.getRating());
 	}
 	
@@ -78,9 +81,11 @@ public class MovieController {
 	private void setStars(int num) {
 		for (int i = 0; i < num; i++) {
 			stars.get(i).setImage(filledStar);
+			stars.get(i).setAccessibleText("This is a button set up for rating movies.");
 		}
 		for (int i = num; i < stars.size(); i++) {
 			stars.get(i).setImage(unfilledStar);
+			stars.get(i).setAccessibleText("This is a button set up for rating movies.");
 		}
 	}
 	
